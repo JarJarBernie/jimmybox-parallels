@@ -8,6 +8,8 @@ vagrant box for PHP Developers on Mac. Works with Shopware and many other applic
 
 2) clone the latest version and run vagrant up
 ```bash
+mkdir -p ~/Vagrant/jimmy
+cd ~/Vagrant/jimmy
 git clone git@bitbucket.org:sternpunkt/jimmybox-arm64.git .
 vagrant up
 ```
