@@ -1,7 +1,7 @@
 ![alt tag](https://raw.githubusercontent.com/JarJarBernie/jimmybox/master/public/src/jimmybox.png)
 
 # jimmybox ARM64 Parallels 1.0: web developer box with multiple PHP versions
-vagrant box for PHP Developers on Mac. Works with Shopware and many other applications and frameworks such as Magento, Oxid 6.x, Wordpress, Typo3 or Laravel.
+vagrant box for PHP Developers on Apple Silicon (M1, M2, M3). Works with Shopware and many other applications and frameworks such as Magento, Oxid 6.x, Wordpress, Typo3 or Laravel.
 
 ## Quick Setup:
 1) Get the latest Versions of Vagrant, Parallels Desktop and Virtual Box
