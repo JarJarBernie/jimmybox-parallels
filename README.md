@@ -77,7 +77,6 @@ You can use our provisioning template to setup your custom hosts.
 3. if needed, copy your SSL certs to provisioning/ssl/ and link it in your custom hosts config file
 4. restart vagrant with the provisioning flag and your vhosts will get enabled if the vhosts dir exists.
 
-````nashorn js
 vagrant reload --provision
 ````
 
