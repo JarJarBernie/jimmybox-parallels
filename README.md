@@ -7,15 +7,24 @@ vagrant box for PHP Developers on Apple Silicon (M1, M2, M3). Works with Shopwar
 1) Get the latest Versions of Vagrant, Parallels Desktop and Virtual Box
 
 2) clone the latest version and run vagrant up
-```bash
+3) Prepare vagrant / create directories:
+
+```
 vagrant plugin install vagrant-parallels
 mkdir -p ~/Vagrant/jimmy
+
+# Create ~/Sites if not exists -> or change the path in your Vagrantfile
+mkdir ~/Sites
+```
+
+4) Clone the latest version of Jimmybox and run vagrant up
+
+```
 cd ~/Vagrant/jimmy
 git clone https://github.com/JarJarBernie/jimmybox-parallels .
 vagrant up
 ```
-
-3) open **192.168.33.20** in your browser (default PHP Version is 8.1)
+5) open **192.168.33.20** in your browser (default PHP Version is 8.1)
 
 (IP can be changed in your Vagrantfile, the "public" directory is your document root)
 
@@ -98,8 +107,38 @@ After that, you can simply uncomment the requested line and reload your apache c
         # SetHandler "proxy:unix:/var/run/php/php5.6-fpm.sock|fcgi://localhost/"
 </FilesMatch>
 ```
+---
 ### Setup Jimmybox shell extensions
+
+```
 cd ~/Vagrant/jimmy/public/sh &&  sh setup.sh
+
+# Available commands:
+jimmyup
+jimmydown
+jimmyssh
+jimmyprovision
+```
+
+---
+
+### Using composer and other shell commands
+
+Please use composer and other shell commands with "sudo". I will publish a better solution if I find one.
+
+```
+sudo composer create-project symfony/skeleton my_project_name
+```
+
+#### Using composer with other PHP Versions:
+
+You may want to use composer with different PHP Versions. Please use the folling commands and do not forget to run them with sudo.
+```
+sudo php7.4 /usr/local/bin/composer create-project symfony/skeleton my_project_name
+sudo php8.0 /usr/local/bin/composer create-project symfony/skeleton my_project_name
+sudo php8.1 /usr/local/bin/composer create-project symfony/skeleton my_project_name
+sudo php8.2 /usr/local/bin/composer create-project symfony/skeleton my_project_name
+```
 
 -----
 
