@@ -8,6 +8,7 @@ vagrant box for PHP Developers on Apple Silicon (M1, M2, M3). Works with Shopwar
 
 2) clone the latest version and run vagrant up
 ```bash
+vagrant plugin install vagrant-parallels
 mkdir -p ~/Vagrant/jimmy
 cd ~/Vagrant/jimmy
 git clone https://github.com/JarJarBernie/jimmybox-parallels .
