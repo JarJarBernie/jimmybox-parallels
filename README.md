@@ -10,7 +10,7 @@ vagrant box for PHP Developers on Apple Silicon (M1, M2, M3). Works with Shopwar
 ```bash
 mkdir -p ~/Vagrant/jimmy
 cd ~/Vagrant/jimmy
-git clone git@bitbucket.org:sternpunkt/jimmybox-arm64.git .
+git clone https://github.com/JarJarBernie/jimmybox-parallels .
 vagrant up
 ```
 
